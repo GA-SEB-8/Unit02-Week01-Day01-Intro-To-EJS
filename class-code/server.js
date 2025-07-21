@@ -44,7 +44,7 @@ app.get("/students/:id",(req,res)=>{
         return oneStudent.id == req.params.id
     })
     console.log(foundStudent)
-    res.render("student-details.ejs")
+    res.render("student-details.ejs",foundStudent)
 })
 
 

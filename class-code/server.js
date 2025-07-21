@@ -27,6 +27,11 @@ app.get("/",(req,res)=>{
     res.render("home.ejs",{language: "JavaScript"})
 })
 
+
+app.get("/students",(req,res)=>{
+    res.render("students.ejs")
+})
+
 app.listen(3000,()=>{
     console.log("Listening on port 3000")
 }) // Listen on port 3000

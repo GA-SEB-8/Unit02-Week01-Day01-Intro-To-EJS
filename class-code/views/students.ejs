@@ -15,7 +15,7 @@
 
    <% students.forEach((oneStudent)=>{ %>
     <p>Student name: <%=oneStudent.name%></p>
-    <a href="<%= oneStudent.id %>">See Student Details</a>
+    <a href="/students/<%= oneStudent.id %>">See Student Details</a>
    <% }) %>
 
 

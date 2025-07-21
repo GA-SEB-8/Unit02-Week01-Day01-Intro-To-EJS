@@ -35,9 +35,20 @@ app.get("/students",(req,res)=>{
     res.render("students.ejs",studentsObj)
 })
 
-app.get("/students/2",(req,res)=>{
+app.get("/students/:id",(req,res)=>{
+    // req.params is an object
+    // {id : "1"}
+    console.log(req.params)
+
+    const foundStudent = students.find((oneStudent)=>{
+        return oneStudent.id == req.params.id
+    })
+    console.log(foundStudent)
     res.render("student-details.ejs")
 })
+
+
+
 
 app.listen(3000,()=>{
     console.log("Listening on port 3000")

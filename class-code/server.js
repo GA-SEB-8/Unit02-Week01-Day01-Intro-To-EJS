@@ -29,7 +29,10 @@ app.get("/",(req,res)=>{
 
 
 app.get("/students",(req,res)=>{
-    res.render("students.ejs")
+    let studentsObj = {
+        students : students
+    }
+    res.render("students.ejs",studentsObj)
 })
 
 app.listen(3000,()=>{

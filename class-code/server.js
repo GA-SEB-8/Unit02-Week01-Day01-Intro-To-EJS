@@ -5,7 +5,7 @@ const app = express() // creates a express application
 // Middleware
 app.use(express.static('public')); //all static files are in the public folder
 
-// 
+
 
 
 
